@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFCBDB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/nama"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+
+                android:text="Nama" />
+
+            <Button
+                android:id="@+id/alamat"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Alamat" />
+
+            <Button
+                android:id="@+id/nomor"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Nomor" />
+
+            <Button
+                android:id="@+id/tanggallahir"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Tanggal Lahir" />
+
+            <Button
+                android:id="@+id/siswa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:onClick="handle"
+                android:text="Siswa"
+                android:background="#F86492" />
+
+            <Button
+                android:id="@+id/guru"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Guru" />
+
+            <Button
+                android:id="@+id/matapelajaran"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Mata Pelajaran" />
+
+            <Button
+                android:id="@+id/jurusan"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Jurusan" />
+
+            <Button
+                android:id="@+id/prodi"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Prodi" />
+
+            <Button
+                android:id="@+id/kampus"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textSize="35dp"
+                android:text="Kampus" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
