@@ -10,6 +10,9 @@ import android.widget.EditText;
 
 import com.example.utsku.R;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 public class Siswa extends AppCompatActivity {
     private EditText nisInput;
     private EditText namaInput;
@@ -49,7 +52,9 @@ public class Siswa extends AppCompatActivity {
                          "\nNama        : " + nama +
                          "\nAlamat      : " + alamat +
                          "\nHandphone : " + handphone +
-                         "\nKeterangan : " + keterangan)
+                         "\nKeterangan : " + keterangan +
+                         "\n\n\n\n" +
+                         "\nTanggal : " + getCurrentDay() +", "+ getCurrentDate())
                 .setIcon(R.mipmap.ic_launcher)
                 .setCancelable(false)
                 .setPositiveButton("Close", new DialogInterface.OnClickListener() {
@@ -64,5 +69,26 @@ public class Siswa extends AppCompatActivity {
 
         // menampilkan alert dialog
         alertDialog.show();
+
+    }
+    public String getCurrentDate(){
+        final Calendar c = Calendar.getInstance();
+        int dayofweek, year, month, day;
+        year = c.get(Calendar.YEAR);
+        month = c.get(Calendar.MONTH);
+        day = c.get(Calendar.DATE);
+
+        return day + " " + (month + 1) + " " + year;
+    }
+
+    public String getCurrentDay(){
+
+        String daysArray[] = {"Minggu","Senin","Selasa", "Rabu","Kamis","Jumat", "Sabtu"};
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+
+        return daysArray[day - 1];
+
     }
 }
