@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -46,7 +45,11 @@ public class Siswa extends AppCompatActivity {
 
         // set pesan dari dialog
         alertDialogBuilder
-                .setMessage("NIS : " + nis + "\nNama : " + nama + "\nAlamat : " + alamat + "\nHandphone : " + handphone + "\nKeterangan : " + keterangan)
+                .setMessage("NIS         : " + nis +
+                         "\nNama        : " + nama +
+                         "\nAlamat      : " + alamat +
+                         "\nHandphone : " + handphone +
+                         "\nKeterangan : " + keterangan)
                 .setIcon(R.mipmap.ic_launcher)
                 .setCancelable(false)
                 .setPositiveButton("Close", new DialogInterface.OnClickListener() {
