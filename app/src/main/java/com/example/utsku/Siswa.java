@@ -1,7 +1,9 @@
 package com.example.utsku;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,23 +12,19 @@ import android.widget.EditText;
 import com.example.utsku.R;
 
 public class Siswa extends AppCompatActivity {
-    public static final String NIM_KEY = "nim";
-    public static final String NAMA_KEY = "nama";
-    public static final String ALAMAT_KEY = "alamat";
-    public static final String HANDPHONE_KEY = "handphone";
-    public static final String KETERANGAN_KEY = "keterangan";
-
-    private EditText nimInput;
+    private EditText nisInput;
     private EditText namaInput;
     private EditText alamatInput;
     private EditText handphoneInput;
     private EditText keteranganInput;
 
+    String nis, nama, alamat, handphone, keterangan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_siswa);
-        nimInput = findViewById(R.id.input_nim);
+        nisInput = findViewById(R.id.input_nis);
         namaInput = findViewById(R.id.input_nama);
         alamatInput = findViewById(R.id.input_alamat);
         handphoneInput = findViewById(R.id.input_handphone);
@@ -34,19 +32,34 @@ public class Siswa extends AppCompatActivity {
     }
 
     public void handleSubmit(View view) {
-        String nim= nimInput.getText().toString();
-        String nama = namaInput.getText().toString();
-        String alamat = alamatInput.getText().toString();
-        String handphone = handphoneInput.getText().toString();
-        String keterangan = keteranganInput.getText().toString();
-        Intent intent = new Intent(this, ProfilSiswa.class);
+        nis = nisInput.getText().toString();
+        nama = namaInput.getText().toString();
+        alamat = alamatInput.getText().toString();
+        handphone = handphoneInput.getText().toString();
+        keterangan = keteranganInput.getText().toString();
 
-        intent.putExtra(NIM_KEY, nim);
-        intent.putExtra(NAMA_KEY, nama);
-        intent.putExtra(ALAMAT_KEY, alamat);
-        intent.putExtra(HANDPHONE_KEY, handphone);
-        intent.putExtra(KETERANGAN_KEY, keterangan);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                this);
 
-        startActivity(intent);
+        // set title dialog
+        alertDialogBuilder.setTitle("Profil Siswa");
+
+        // set pesan dari dialog
+        alertDialogBuilder
+                .setMessage("NIS : " + nis + "\nNama : " + nama + "\nAlamat : " + alamat + "\nHandphone : " + handphone + "\nKeterangan : " + keterangan)
+                .setIcon(R.mipmap.ic_launcher)
+                .setCancelable(false)
+                .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // jika tombol diklik, maka akan menutup activity ini
+                        Siswa.this.finish();
+                    }
+                });
+
+        // membuat alert dialog dari builder
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // menampilkan alert dialog
+        alertDialog.show();
     }
 }

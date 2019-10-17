@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#FFCBDB"
+    android:orientation="vertical"
     tools:context=".Siswa">
 
     <TextView
@@ -28,15 +28,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="NIM" />
+            android:text="NIS" />
 
         <EditText
-            android:id="@+id/input_nim"
+            android:id="@+id/input_nis"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint=""
-            android:inputType="text" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint=""
-            android:inputType="text" />
+            android:inputType="phone" />
     </LinearLayout>
 
     <LinearLayout
@@ -134,8 +134,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:onClick="handleSubmit"
         android:background="#F56B9A"
+        android:onClick="handleSubmit"
         android:text="Oke" />
 
 </LinearLayout>

@@ -26,74 +26,73 @@
                 android:id="@+id/nama"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-
-                android:text="Nama" />
+                android:text="Nama"
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/alamat"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Alamat" />
+                android:text="Alamat"
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/nomor"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Nomor" />
+                android:text="Nomor"
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/tanggallahir"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Tanggal Lahir" />
+                android:text="Tanggal Lahir"
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/siswa"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
+                android:background="#F86492"
                 android:onClick="handle"
                 android:text="Siswa"
-                android:background="#F86492" />
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/guru"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Guru" />
+                android:text="Guru"
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/matapelajaran"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Mata Pelajaran" />
+                android:text="Mata Pelajaran"
+                android:textSize="35dp" />
 
             <Button
                 android:id="@+id/jurusan"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Jurusan" />
+                android:text="Jurusan"
+                android:textSize="35dp" />
 
             <Button
-                android:id="@+id/prodi"
+                android:id="@+id/buku"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Prodi" />
+                android:text="Buku"
+                android:textSize="35dp" />
 
             <Button
-                android:id="@+id/kampus"
+                android:id="@+id/ekstrakulikuler"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:textSize="35dp"
-                android:text="Kampus" />
+                android:text="Kampus"
+                android:textSize="35dp" />
 
         </LinearLayout>
     </ScrollView>
