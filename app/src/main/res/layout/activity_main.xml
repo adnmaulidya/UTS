@@ -91,7 +91,7 @@
                 android:id="@+id/ekstrakulikuler"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="Kampus"
+                android:text="Ekstrakulikuler"
                 android:textSize="35dp" />
 
         </LinearLayout>
